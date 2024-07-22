@@ -1,8 +1,8 @@
 ### debian_cheat_sheet
 
-#### apt upgrade
+#### apt upgrade + curl/tcpdump
 ```bash
-apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade
+apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade && apt -y install curl tcpdump
 ```
 
 #### install nerdctl
