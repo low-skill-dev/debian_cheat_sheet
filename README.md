@@ -14,7 +14,7 @@ systemctl enable --now containerd
 
 #### Copy Win11 SSH key to the Debian server (copying is not working in PS, use CMD)
 ```bash
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@stroyform.keenetic.pro "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@123.123.123.123 "cat >> .ssh/authorized_keys"
 ```
 
 #### Folder size recursively
