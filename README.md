@@ -3,13 +3,29 @@
 #### apt upgrade + curl/tcpdump
 ```bash
 apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade && apt -y install curl tcpdump
+```[[](url)](url)
+
+
+
+#### enable swap
+```
+free -h # check if swap file exists!
+```
+```bash
+fallocate -l 4G /swapfile && \
+chmod 600 /swapfile && \
+mkswap /swapfile && \
+swapon /swapfile && \
+sysctl vm.swappiness=80 && \
+echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 ```
 
 #### install nerdctl
 ```bash
 curl -L -o nerdctl.tar.gz https://github.com/containerd/nerdctl/releases/download/v2.0.0-rc.0/nerdctl-full-2.0.0-rc.0-linux-amd64.tar.gz && \
 tar Cxzvvf /usr/local nerdctl.tar.gz && \
-systemctl enable --now containerd
+systemctl enable --now containerd && \
+apt -y install iptables
 ```
 
 #### Copy Win11 SSH key to the Debian server
