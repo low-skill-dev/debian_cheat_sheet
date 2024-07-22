@@ -3,12 +3,12 @@
 #### apt upgrade + curl/tcpdump
 ```bash
 apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade && apt -y install curl tcpdump
-```[[](url)](url)
+```
 
 
 
 #### enable swap
-```
+```bash
 free -h # check if swap file exists!
 ```
 ```bash
@@ -18,6 +18,11 @@ mkswap /swapfile && \
 swapon /swapfile && \
 sysctl vm.swappiness=80 && \
 echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+```
+
+#### disable swap
+```bash
+swapoff -a # comment swapfile lines in /etc/fstab
 ```
 
 #### install nerdctl
