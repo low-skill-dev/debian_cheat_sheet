@@ -1,8 +1,8 @@
 ### debian_cheat_sheet
 
-#### apt upgrade + curl/tcpdump
+#### apt upgrade + curl/tcpdump/htop/git
 ```bash
-apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade && apt -y install curl tcpdump
+apt -y update && apt -y upgrade && apt -y full-upgrade && apt -y dist-upgrade && apt -y install curl tcpdump htop git
 ```
 
 
