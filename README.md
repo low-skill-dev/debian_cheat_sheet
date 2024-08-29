@@ -16,7 +16,7 @@ fallocate -l 4G /swapfile && \
 chmod 600 /swapfile && \
 mkswap /swapfile && \
 swapon /swapfile && \
-sysctl vm.swappiness=80 && \
+sysctl vm.swappiness=99 && \
 echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 ```
 
